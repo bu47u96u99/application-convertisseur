@@ -92,8 +92,8 @@ textarea {
     Author     : Mikaël
 */
 
-img.res{
-    margin:0;
+#img{
+    margin: 5px;
     padding:0;
 }
 
