@@ -41,12 +41,12 @@
       "test": "test"
     }
   },
-  "homepage": "http://mikaelpc3e.ddns.net/html/applicationresistance",
+  "homepage": "http://mikaelpc3e.ddns.net/html/applicationconvertisseur",
   "license": {
     "type": "MIT",
     "url": "https://github.com/h5bp/html5-boilerplate/blob/master/LICENSE.txt"
   },
-  "name": "applicationresistance",
+  "name": "applicationconvertisseur",
   "private": true,
   "scripts": {
     "build": "gulp build",

@@ -3,30 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Application pour calculer les couleurs d'une résistance">
+    <meta name="description" content="Application pour convertir des unités d'octets">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Application Résistance</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="img/icons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="img/icons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="img/icons/manifest.json">
-    <link rel="shortcut icon" href="img/icons/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="Application résistance">
-    <meta name="application-name" content="Application résistance">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="img/icons/mstile-144x144.png">
-    <meta name="msapplication-config" content="img/icons/browserconfig.xml">
-    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+
 
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -39,155 +19,32 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<p id="title" style="text-align:center">Application Résistance</p>
-<table id="resistor">
-    <tbody>
-    <tr>
-        <td><img src="img/1.gif" alt="im1" class="res"></td>
-        <td><img id="band1" alt="band1" src="img/b_clear.gif" class="res"  height="69" width="13"></td>
-        <td><img src="img/2.gif" alt="im2" class="res"></td>
-        <td><img id="band2" alt="band2" src="img/s_clear.gif" class="res"  height="69" width="10"></td>
-        <td><img width="10" height="69" alt="im3" src="img/s_clear.gif"></td>
-        <td><img id="band3" alt="band3" src="img/s_clear.gif" class="res"  height="69" width="10"></td>
-        <td><img width="10" height="69" alt="im3" class="res" src="img/s_clear.gif"></td>
-        <td><img id="band4" alt="band4" src="img/s_clear.gif" class="res"  height="69" width="10"></td>
-        <td><img width="10" height="69" alt="im3" class="res" src="img/s_clear.gif"></td>
-        <td><img id="band5" alt="band5" src="img/s_clear.gif" class="res"  height="69" width="10"></td>
-        <td><img src="img/4.gif" alt="im4" class="res"></td>
-        <td><img id="band6" alt="band6" src="img/b_clear.gif" class="res"  height="69" width="13"></td>
-        <td><img src="img/5.gif" alt="im5" class="res"></td>
-    </tr>
-    </tbody>
-</table>
 
-<p style="text-align:center;">Sélectionnez la couleur de chaque anneau sur la résistance :</p>
+<div id="content">
 
-<table id="resistor-color-select">
-    <tbody>
-    <tr>
-        <td>
-            <select  name="Color1" size="1" id="one" onchange="calculate(), this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color">
-                <option value="" selected="selected" style="background-color:#ffffff; color:#000000;">Aucune
-                <option value="1" style="background-color:brown; color:#ffffff;">Marron
-                <option value="2" style="background-color:red; color:#ffffff;">Rouge
-                <option value="3" style="background-color:orange; color:#000000;">Orange
-                <option value="4" style="background-color:yellow; color:#000000;">Jaune
-                <option value="5" style="background-color:green; color:#ffffff;">Vert
-                <option value="6" style="background-color:blue; color:#ffffff;">Bleu
-                <option value="7" style="background-color:violet; color:#ffffff;">Violet
-                <option value="8" style="background-color:gray; color:#ffffff;">Gris
-                <option value="9" style="background-color:#ffffff; color:#000000;">Blanc
-            </select>
-        </td>
-        <td>
-            <select  name="Color2" size="1" onchange="calculate(), this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="two">
-                <option value="" selected="selected" style="background-color:#ffffff; color:#000000;">Aucune
-                <option value="0" style="background-color:#000000; color:#ffffff;">Noir
-                <option value="1" style="background-color:brown; color:#ffffff;">Marron
-                <option value="2" style="background-color:red; color:#ffffff;">Rouge
-                <option value="3" style="background-color:orange; color:#000000;">Orange
-                <option value="4" style="background-color:yellow; color:#000000;">Jaune
-                <option value="5" style="background-color:green; color:#ffffff;">Vert
-                <option value="6" style="background-color:blue; color:#ffffff;">Bleu
-                <option value="7" style="background-color:violet; color:#ffffff;">Violet
-                <option value="8" style="background-color:gray; color:#ffffff;">Gris
-                <option value="9" style="background-color:#ffffff; color:#000000;">Blanc
-            </select>
-        </td>
-        <td>
-            <select name="Color3" size="1" onchange="calculate(), this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="three" style="display:block; background-color:#ffffff; color:#000000;">
-                <option value="" selected="selected" style="background-color:#ffffff; color:#000000;">Aucune
-                <option value="0" style="background-color:#000000; color:#ffffff;">Noir
-                <option value="1" style="background-color:brown; color:#ffffff;">Marron
-                <option value="2" style="background-color:red; color:#ffffff;">Rouge
-                <option value="3" style="background-color:orange; color:#000000;">Orange
-                <option value="4" style="background-color:yellow; color:#000000;">Jaune
-                <option value="5" style="background-color:green; color:#ffffff;">Vert
-                <option value="6" style="background-color:blue; color:#ffffff;">Bleu
-                <option value="7" style="background-color:violet; color:#ffffff;">Violet
-                <option value="8" style="background-color:gray; color:#ffffff;">Gris
-                <option value="9" style="background-color:#ffffff; color:#000000;">Blanc
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <select name="Multiplier" size="1" onchange="calculate(), this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="four">
-                <option value="" selected="selected" style="background-color:#ffffff; color:#000000;">Aucune
-                <option value="1" style="background-color:silver; color:#000000;">Argent
-                <option value="10" style="background-color:gold; color:#000000;">Or
-                <option value="100" style="background-color:black; color:#ffffff;">Noir
-                <option value="1000" style="background-color:brown; color:#ffffff;">Marron
-                <option value="10000" style="background-color:red; color:#ffffff;">Rouge
-                <option value="100000" style="background-color:orange; color:#000000;">Orange
-                <option value="1000000" style="background-color:yellow; color:#000000;">Jaune
-                <option value="10000000" style="background-color:green; color:#ffffff;">Vert
-                <option value="100000000" style="background-color:blue; color:#ffffff;">Bleu
-                <option value="1000000000" style="background-color:violet; color:#ffffff;">Violet
+    <p id="title" style="text-align:center">Application convertisseur</p>
+
+    <img id="img" height="150" width="150" src="img/img.jpg"/>
+    <br/><br/>
+
+    <p style="display: inline;text-align: center;">Valeur à convertir : </p><br/>
+    <input style="text-align:center" type="number" name="keywords" id="value" onkeypress="convert();" onkeyup="convert();" onkeydown="convert();" onchange="convert();">
+    <select name="units" size="1" onchange="convert()" id="unit">
+        <option value="o">o
+        <option value="ko">ko
+        <option value="mo">Mo
+        <option value="go">Go
+        <option value="to">To
+    </select>
 
 
-            </select>
-        </td>
-        <td>
-            <select name="Tolerance" size="1" onchange="calculate(), this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="five">
-                <option value="" selected="selected" style="background-color:#ffffff; color:#000000;">Aucune
-                <option value="0.1" style="background-color:violet; color:#ffffff;">Violet
-                <option value="0.25" style="background-color:blue; color:#ffffff;">Bleu
-                <option value="0.5" style="background-color:green; color:#ffffff;">Vert
-                <option value="1" style="background-color:brown; color:#ffffff;">Marron
-                <option value="2" style="background-color:red; color:#ffffff;">Rouge
-                <option value="5" style="background-color:gold; color:#000000;">Or
-                <option value="10" style="background-color:silver; color:#000000;">Argent
-            </select>
-        </td>
-        <td>
-            <select name="TC" size="1" onchange="calculate(), this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="six">
-                <option value="" selected="selected" style="background-color:#ffffff; color:#000000;"> Aucune
-                <option value="5" style="background-color:violet; color:#ffffff;">Violet
-                <option value="10" style="background-color:blue; color:#ffffff;">Bleu
-                <option value="15" style="background-color:orange; color:#000000;">Orange
-                <option value="25" style="background-color:yellow; color:#000000;">Jaune
-                <option value="50" style="background-color:red; color:#ffffff;">Rouge
-                <option value="100" style="background-color:brown; color:#ffffff;">Marron
-            </select>
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-<p style="display: inline;text-align: center;">Valeur de la résistance : </p><br/>
-<input style="text-align:center" type="number" name="keywords" id="res-label" onkeypress="set_res();" onkeyup="set_res();" onkeydown="set_res();" onchange="set_res();">
-<select name="units" size="1" onchange="set_res()" id="unit">
-    <option value="0">Ω
-    <option value="3">kΩ
-    <option value="6">MΩ
-</select><br/>
-
-<p style="display: inline;text-align: center;">Tolérance : </p><br/>
-<select size="1" onchange="set_tol(),this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="tol">
-    <option value="" selected="selected" style="background-color:#ffffff; color:#000000;">Aucune
-    <option value="0.1" style="background-color:violet; color:#ffffff;">0.1%
-    <option value="0.25" style="background-color:blue; color:#ffffff;">0.25%
-    <option value="0.5" style="background-color:green; color:#ffffff;">0.5%
-    <option value="1" style="background-color:brown; color:#ffffff;">1%
-    <option value="2" style="background-color:red; color:#ffffff;">2%
-    <option value="5" style="background-color:gold; color:#000000;">5%
-    <option value="10" style="background-color:silver; color:#000000;">10%
-</select><br/>
-
-<p style="display: inline;text-align: center;">Tolérance thermique : </p><br/>
-<select size="1" onchange="set_tolc(),this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="tolc">
-    <option value="" selected="selected" style="background-color:#ffffff; color:#000000;"> Aucune
-    <option value="5" style="background-color:violet; color:#ffffff;">5 ppm
-    <option value="10" style="background-color:blue; color:#ffffff;">10 ppm
-    <option value="15" style="background-color:orange; color:#000000;">15 ppm
-    <option value="25" style="background-color:yellow; color:#000000;">25 ppm
-    <option value="50" style="background-color:red; color:#ffffff;">50 ppm
-    <option value="100" style="background-color:brown; color:#ffffff;">100 ppm
-</select>
-<br/>
-
-
+    <p id="bits"></p>
+    <p id="octets"></p>
+    <p id="ko"></p>
+    <p id="mo"></p>
+    <p id="go"></p>
+    <p id="to"></p>
+</div>
 
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
