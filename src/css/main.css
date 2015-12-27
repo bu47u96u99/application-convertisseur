@@ -92,8 +92,12 @@ textarea {
     Created on : 16 mars 2015, 12:26:15
     Author     : Mikaël
 */
+.values{
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
 
-#img{
+img{
     margin: 5px;
     padding:0;
 }
