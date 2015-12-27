@@ -162,7 +162,7 @@ gulp.task('opt-images', function(cb) {
 // package (see the check-for-favicon-update task below).
 gulp.task('generate-favicon', function (done) {
     realFavicon.generateFavicon({
-        masterPicture: dirs.src + '/img/img.jpg',
+        masterPicture: dirs.src + '/img/img.png',
         dest: dirs.dist + '/img/icons',
         iconsPath: 'img/icons',
         design: {
