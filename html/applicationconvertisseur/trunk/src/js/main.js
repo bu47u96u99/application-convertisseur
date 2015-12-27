@@ -2,11 +2,15 @@ function convert()
 {
     var value = document.getElementById("value").value;
     var unit = document.getElementById("unit").value;
-    var result = document.getElementById("result");
     var number = parseInt(value);
 
     if(isNaN(number)){
-        result.innerHTML = "";
+        document.getElementById("bits").innerHTML = "";
+        document.getElementById("octets").innerHTML = "";
+        document.getElementById("ko").innerHTML = "";
+        document.getElementById("mo").innerHTML = "";
+        document.getElementById("go").innerHTML = "";
+        document.getElementById("to").innerHTML = "";
     }else{
         switch(unit) {
             case 'ko':
